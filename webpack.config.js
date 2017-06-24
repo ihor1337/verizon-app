@@ -10,10 +10,15 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015']
-        }
+        use: [
+          'ng-annotate-loader',
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['es2015']
+            }
+          }
+        ]
       },
       {
         test: /\.scss$/,
