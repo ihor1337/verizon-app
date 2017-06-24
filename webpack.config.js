@@ -1,8 +1,11 @@
 /**
  * Created by Ihor on 6/23/2017.
  */
-const path = require('path');
+const path = require('path')
+const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const autoprefixer = require('autoprefixer')
+
 
 module.exports = {
   module: {
@@ -22,7 +25,18 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('css-loader!sass-loader')
+        exclude: /(node_modules|bower_components)/,
+        loader: ExtractTextPlugin.extract('css-loader!sass-loader!postcss-loader')
+      },
+      {
+        test: /\.html$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'raw-loader'
+      },
+      {
+        test: /\.(png|jpe?g)$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'url-loader'
       }
     ]
   },
@@ -36,6 +50,11 @@ module.exports = {
     new ExtractTextPlugin({
       filename: 'app.css',
       allChunks: true
+    }),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        postcss: [autoprefixer()]
+      }
     })
   ],
   devServer: {

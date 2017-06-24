@@ -15,6 +15,7 @@
     "angular": "^1.6.4"
   },
   "devDependencies": {
+    "autoprefixer": "^7.1.1",
     "babel": "^6.23.0",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.0",
@@ -23,7 +24,10 @@
     "extract-text-webpack-plugin": "^2.1.2",
     "ng-annotate-loader": "^0.6.1",
     "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "raw-loader": "^0.5.1",
     "sass-loader": "^6.0.6",
+    "url-loader": "^0.5.9",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.0"
   }
