@@ -1,0 +1,122 @@
+@import "../../app";
+nav#sidebar{
+  position: absolute;
+  left: -300px;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: red;
+  background: url('../../../img/RedBkg.png') repeat;
+  transition: transform .3s ease;
+  &.opened {
+    transform: translateX(300px);
+  }
+  .user-bar{
+    height: 55px;
+    background-color: #000000;
+    display: flex;
+
+    .user-avatar{
+      width: 55px;
+      height: 55px;
+
+      img{
+        width: 100%;
+      }
+    }
+
+    .user-name{
+      font-family: $font;
+      font-weight: 300;
+      color: #fff;
+      align-self: center;
+      font-size: 1.1rem;
+      margin-left: 20px;
+    }
+  }
+
+  ul{
+    font-size: 1.1rem;
+    li{
+      height: 55px;
+      width: 100%;
+      border-bottom: 1px solid #b60000;
+      &:last-child{
+        border-bottom: none;
+      }
+
+      a{
+        display: flex;
+        background-color: transparent;
+        text-decoration: none;
+        height: inherit;
+        padding:{
+         left: 65px;
+        }
+        transition: background-color .2s ease;
+        position: relative;
+
+        &:active{
+          background-color: #6e0000;
+        }
+
+        span{
+          font-family: inherit;
+          font-weight: 400;
+          color: #fff;
+          text-transform: capitalize;
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+
+.arrow-r{
+  background: url("../../../img/Arrow_Table@2x.png") no-repeat center;
+}
+
+.icon-right{
+  align-self: center;
+  position: absolute;
+  right: 0;
+  padding-left: 10px;
+  background-size: contain;
+  width: 40px;
+  height: 30px;
+}
+
+.icon-left {
+  height: 40px;
+  width: 40px;
+  align-self: center;
+  position: absolute;
+  left: 10px;
+}
+
+.friends{
+  background: url("../../../img/Settings_FriendsSugg@2x.png") no-repeat;
+  background-size: 50px 50px;
+  background-position: -4px;
+}
+
+.ideas{
+  background: url("../../../img/Ideas@2x.png") no-repeat;
+  background-size: cover;
+}
+
+.settings{
+  background: url('../../../img/Nav_Settings@2x.png') no-repeat;
+  background-size: cover;
+}
+
+.how-it-works{
+  background: url("../../../img/Nav_How@2x.png") no-repeat;
+  background-size: cover;
+}
+
+.feed{
+  display: inline-block;
+  color: #f9f9f9;
+  fill: currentColor;
+}
