@@ -24,6 +24,9 @@ const app = angular
                         ng-class="{'opened':$ctrl.isOpened}">
                     </main-screen>`
       })
+      .when('/settings',{
+        template: `<h1>SETIIIIIIIIIINGS!!!!!</h1>`
+      })
   })
   .name
 
