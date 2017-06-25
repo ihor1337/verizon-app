@@ -91,6 +91,7 @@ main-screen{
   left: 0;
   transition: transform .3s ease;
   z-index: 1;
+  display: block;
 
   &.opened{
     transform: translateX(300px);

@@ -8,8 +8,6 @@ export default class SidebarController {
   }
 
   $onInit (){
-    console.log(this.opened)
     this.toggle()
-    console.log(this.opened)
   }
 }

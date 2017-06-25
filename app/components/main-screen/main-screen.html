@@ -1,3 +1,4 @@
+</ui-view opened="$ctrl.isOpened" toggle="$ctrl.toggleSidebar($event)">
 <header>
     <section id="hero">
         <button class="hamburger" ng-click="$ctrl.handleToggle()" ng-class="{'opened':$ctrl.opened}">
@@ -10,3 +11,5 @@
 <main id="main">
     <h1>App content here</h1>
 </main>
+<ui-view>
+

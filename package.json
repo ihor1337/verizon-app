@@ -12,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.6.4"
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "angular-ui-router": "^1.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
