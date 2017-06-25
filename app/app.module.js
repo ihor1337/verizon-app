@@ -18,6 +18,7 @@ const app = angular
     $routeProvider
       .when('/',{
         template: `<main-screen 
+                        class="main-screen"
                         opened="$ctrl.isOpened" 
                         toggle="$ctrl.toggleSidebar($event)" 
                         ng-class="{'opened':$ctrl.isOpened}">

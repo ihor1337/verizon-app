@@ -86,12 +86,22 @@
   }
 }
 
-main-screen{
+/*this sets height of ng-view to 100% as <main> takes all available spaces due to flex.*/
+.ng-view-content,
+ng-view,
+[ng-view]{
+  height: 100%;
+}
+
+.main-screen{
   position: relative;
   left: 0;
   transition: transform .3s ease;
   z-index: 1;
-  display: block;
+  /*Rules below needed to make <main> element take all available space.*/
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   &.opened{
     transform: translateX(300px);
