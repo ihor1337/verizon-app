@@ -1,18 +1,15 @@
-@import "../../app";
+@import "../../utility";
 @import "mobile";
 section#settings{
   .button{
-    background-image: linear-gradient(
-                    rgb(218,20,20),
-                    rgb(182,29,29),
-                    rgb(164,27,27));
+    background-image: $btn-bg;
     color: #fff;
-    border: 1px solid rgb(144,24,24);
+    border: $btn-border;
     border-radius: 4px;
     cursor: pointer;
     outline: none;
     &:active{
-      background-image: linear-gradient(#b40000, #8b0000, #830000);
+      background-image: $btn-active;
     }
   }
   header{
@@ -104,8 +101,7 @@ main{
       }
 
       .user-name{
-        display: flex;
-        flex-direction: column;
+        @extend .flex-col;
         width: 100%;
         padding-left: 20px;
         .input-label-group{
@@ -137,8 +133,7 @@ main{
       }
     }
     .setting-row{
-      display: flex;
-      flex-direction: column;
+      @extend .flex-col;
       border-top: 1px solid #ececec;
       padding-left: 10px;
       .item-group{

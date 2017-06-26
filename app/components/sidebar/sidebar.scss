@@ -1,4 +1,4 @@
-@import "../../app";
+@import "../../utility";
 @import "mobile";
 nav#sidebar{
   position: absolute;
@@ -62,7 +62,7 @@ nav#sidebar{
         position: relative;
 
         &:active{
-          background-color: #6e0000;
+          background-color: $sidebar-active;
         }
 
         span{

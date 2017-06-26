@@ -1,27 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
-
-//vars
-$bg: rgb(234,234,234);
-$nav-h: 60px;
-$container: 768px;
-$font: 'Roboto', Arial, sans-serif;
-
-//utility classes
-.full-height{
-  height: 100%;
-}
-
-.flex-col{
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-abs-center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+@import "utility";
 html,
 body{
   @extend .full-height;

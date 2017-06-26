@@ -1,4 +1,5 @@
 @import "mobile";
+@import "../../utility";
 #hero{
   height: 240px;
   background: url("../../../img/1.jpg") center;
@@ -7,9 +8,7 @@
 }
 
 #main{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend .flex-abs-center;
   flex-grow: 1;
 }
 
@@ -68,7 +67,7 @@
 .ng-view-content,
 ng-view,
 [ng-view]{
-  height: 100%;
+  @extend .full-height;
 }
 
 .main-screen{
@@ -83,7 +82,7 @@ ng-view,
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   &.opened{
-    transform: translateX(300px);
+    transform: translate3d(300px,0,0);
     box-shadow: -9px 0 6px -4px rgba(0,0,0,0.3);
   }
 }

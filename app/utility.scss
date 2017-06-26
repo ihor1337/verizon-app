@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+//vars
+$bg: rgb(234,234,234);
+$container: 768px;
+$font: 'Roboto', Arial, sans-serif;
+$btn-bg: linear-gradient(
+                rgb(218,20,20),
+                rgb(182,29,29),
+                rgb(164,27,27));
+$btn-active: linear-gradient(#b40000, #8b0000, #830000);
+$btn-border: 1px solid rgb(144,24,24);
+$sidebar-active: #6e0000;
+
+//utility classes
+.full-height{
+  height: 100%;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-abs-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
