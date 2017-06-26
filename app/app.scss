@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
 //vars
-$bg: #ececec;
+$bg: rgb(234,234,234);
 $nav-h: 60px;
 $container: 768px;
 $font: 'Roboto', Arial, sans-serif;
@@ -25,7 +25,7 @@ $font: 'Roboto', Arial, sans-serif;
 html,
 body{
   @extend .full-height;
-  font-size: 100%;
+  font-size: 62.5%;
 }
 body{
   padding: 0;
@@ -42,14 +42,19 @@ ul{
   list-style: none;
 }
 
+h1{
+  font-size: 3.2rem;
+}
+
 #app-content{
   @extend .flex-col;
   @extend .full-height;
 }
 
 .container{
-  width: $container;
+  max-width: $container;
+  width: 100%;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
 }

@@ -7,12 +7,14 @@ import ngRoute from 'angular-route'
 import AppComponent from './app.component'
 import {MainScreenComponent} from './components/main-screen/main-screen.component'
 import {SidebarComponent} from './components/sidebar/sidebar.component'
+import {SettingsComponent} from './components/settings/settings.component'
 
 const app = angular
   .module('app', [ngRoute])
   .component('app', AppComponent)
   .component('mainScreen', MainScreenComponent)
   .component('sidebar', SidebarComponent)
+  .component('settings', SettingsComponent)
   .config(($routeProvider)=> {
     "ngInject";
     $routeProvider
@@ -25,7 +27,7 @@ const app = angular
                     </main-screen>`
       })
       .when('/settings',{
-        template: `<h1>SETIIIIIIIIIINGS!!!!!</h1>`
+        template: `<settings></settings>`
       })
   })
   .name

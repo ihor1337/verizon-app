@@ -1,0 +1,264 @@
+@import "../../app";
+section#settings{
+  .button{
+    background-image: linear-gradient(
+                    rgb(218,20,20),
+                    rgb(182,29,29),
+                    rgb(164,27,27));
+    color: #fff;
+    border: 1px solid rgb(144,24,24);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    &:active{
+      background-image: linear-gradient(#b40000, #8b0000, #830000);
+    }
+  }
+  header{
+    background: url('../../../img/NavBkg@2x.png');
+    width: 100%;
+    height: 60px;
+    position: relative;
+
+    button.close-btn{
+      @extend .button;
+      margin-left: 10px;
+      margin-top: 10px;
+      width: 45px;
+      height: 40px;
+      &:hover{
+        i.close-icon{
+          transform: rotate(180deg);
+        }
+      }
+
+      i.close-icon{
+        background: url('../../../img/close-icon.png');
+        background-size: cover;
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin: 0 auto;
+        transition: transform 0.2s ease-in-out;
+      }
+    }
+
+    span{
+      color: #ffffff;
+      font-family: $font;
+      font-weight: 500;
+      font-size: 1.9rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-transform: capitalize;
+    }
+  }
+
+  button.logout-btn{
+    @extend .button;
+    padding: 7px 55px;
+    text-transform: capitalize;
+    font-family:$font;
+    font-weight: 500;
+    font-size: 1.6rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  padding-bottom: 25px;
+}
+
+main{
+  padding: 25px;
+  margin: 0 auto;
+
+  ul{
+    list-style: none;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    background-color: #fff;
+    width: 100%;
+    overflow-x: hidden;
+    li{
+      &:first-child{
+        padding: {
+          left: 10px;
+        };
+      }
+    }
+    .user-header{
+      display: flex;
+      width: 100%;
+      .user-pic{
+        max-width: 80px;
+        max-height: 80px;
+        width: 100%;
+        height: 100%;
+        margin-top: 10px;
+
+        img{
+          width: 100%;
+          overflow: hidden;
+          border: 1px solid #ececec;
+          border-radius: 1px;
+        }
+      }
+
+      .user-name{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 20px;
+        .input-label-group{
+          display: flex;
+          height: 50px;
+          width: 100%;
+          &:first-child{
+            border-bottom: 1px solid #ececec;
+          }
+        }
+        span{
+          align-self: center;
+          color: rgb(210,210,210);
+          font-family: $font;
+          font-weight: 400;
+          font-size: 1.6rem;
+        }
+
+        input{
+          outline: none;
+          border: none;
+          color: #000000;
+          font-size: 1.6rem;
+          padding-left: 10px;
+          font-family: $font;
+          font-weight: 400;
+          flex-grow: 1;
+        }
+      }
+    }
+    .setting-row{
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid #ececec;
+      padding-left: 10px;
+      .item-group{
+        display: flex;
+        height: 50px;
+        span{
+          align-self: center;
+          color: rgb(210,210,210);
+          font-weight: 400;
+          text-transform: capitalize;
+          font-size: 1.6rem;
+          margin-left: 5px;
+        }
+
+        input{
+          outline: none;
+          border: none;
+          color: #000000;
+          font-size: 1.6rem;
+          padding-left: 10px;
+          font-weight: 400;
+          flex-grow: 1;
+        }
+      }
+    }
+
+    &#posts, &#social{
+      margin-top: 25px;
+      li{
+        &:first-child{
+          padding: 0;
+        }
+      }
+    }
+
+    &#posts{
+      li{
+        i:last-child{
+          margin-right: 15px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+.icon{
+  display:block;
+  width: 40px;
+  height: 40px;
+  align-self: center;
+}
+
+.icon.friends{
+  background-size: 47px 47px;
+}
+
+.svg-phone-gray{
+  svg{
+    width: 100%;
+    height: 100%;
+    path{
+      fill: #c6c6c6;
+    }
+  }
+  @extend .icon;
+  margin-left: auto;
+}
+
+.svg-phone-red{
+  @extend .svg-phone-gray;
+  path{
+    fill: #d42323 !important;
+  }
+}
+
+.email-icon-red{
+  background: url("../../../img/Email_Selected@2x.png");
+  background-size: cover;
+}
+
+.email-icon{
+  background: url("../../../img/Email_Unselected@2x.png");
+  background-size: cover;
+}
+
+.calendar-icon{
+  background: url("../../../img/Settings_Calendar@2x.png");
+  background-size:cover;
+}
+
+.icon.anniversary-icon{
+  left: -2px;
+}
+
+.anniversary-icon{
+  background: url("../../../img/Settings_Anniversary@2x.png");
+  background-size: cover;
+}
+
+.key-icon{
+  background: url("../../../img/Settings_Password@2x.png");
+  background-size: cover;
+}
+
+.partner-posts-icon{
+  background: url("../../../img/Settings_PostsfromPartner.png");
+  background-size: cover;
+}
+
+.friends-posts-icon{
+  background: url("../../../img/Settings_PostfromFriends@2x.png");
+  background-size: cover;
+}
+
+.fb-icon{
+  background: url('../../../img/Facebook@2x.png');
+  background-size: cover;
+}
