@@ -9,8 +9,6 @@ export default class SettingsService{
 
   getSettings(){
     return this._$http.get('data.json')
-      .then(res => {
-        return res.data
-      })
+      .then(res => res.data)
   }
 }

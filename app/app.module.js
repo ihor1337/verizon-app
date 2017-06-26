@@ -31,9 +31,7 @@ const app = angular
       .when('/settings',{
         template: `<settings data="$resolve.settings"></settings>`,
         resolve:{
-          settings: (SettingsService)=>{
-            return SettingsService.getSettings()
-          }
+          settings: (SettingsService)=>SettingsService.getSettings()
         }
       })
   })
