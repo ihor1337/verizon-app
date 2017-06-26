@@ -1,3 +1,4 @@
+@import "mobile";
 #hero{
   height: 240px;
   background: url("../../../img/1.jpg") center;
@@ -79,7 +80,8 @@ ng-view,
   display: flex;
   flex-direction: column;
   height: 100%;
-
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
   &.opened{
     transform: translateX(300px);
     box-shadow: -9px 0 6px -4px rgba(0,0,0,0.3);

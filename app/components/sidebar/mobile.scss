@@ -1,0 +1,9 @@
+@media (max-width: 420px) {
+  nav#sidebar{
+    left: -250px !important;
+    width: 250px !important;
+    &.opened {
+      transform: translateX(250px) !important;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 @import "../../app";
+@import "mobile";
 nav#sidebar{
   position: absolute;
   left: -300px;
@@ -6,10 +7,14 @@ nav#sidebar{
   bottom: 0;
   width: 300px;
   background-color: red;
-  background: url('../../../img/RedBkg.png') repeat;
+  background-image: url('../../../img/RedBkg.png');
+  background-repeat: repeat;
   transition: transform .3s ease;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  overflow: auto;
   &.opened {
-    transform: translateX(300px);
+    transform: translate3d(300px, 0, 0);
   }
   .user-bar{
     height: 55px;

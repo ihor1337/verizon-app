@@ -1,0 +1,23 @@
+@media only screen and (max-width:480px){
+  main{
+    padding: 10px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  main{
+    .user-header{
+      input{
+        width: 90%;
+      }
+    }
+
+    .setting-row{
+      .item-group{
+        input{
+          width: 50%;
+        }
+      }
+    }
+  }
+}

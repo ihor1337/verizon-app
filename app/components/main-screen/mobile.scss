@@ -1,0 +1,7 @@
+@media (max-width: 420px) {
+  .main-screen{
+    &.opened{
+      transform: translateX(250px) !important;
+    }
+  }
+}
