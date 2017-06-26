@@ -78,8 +78,7 @@ nav#sidebar{
 
 .icon-right{
   align-self: center;
-  position: absolute;
-  right: 0;
+  margin-left: auto;
   padding-left: 10px;
   background-size: contain;
   width: 40px;
@@ -89,9 +88,11 @@ nav#sidebar{
 .icon-left {
   height: 40px;
   width: 40px;
-  align-self: center;
+  //align-self: center;
   position: absolute;
   left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .friends{
