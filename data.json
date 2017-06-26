@@ -1,0 +1,11 @@
+{
+  "user-info": {
+    "name": {
+      "fname": "Joe",
+      "lname": "Biden"
+    },
+    "email": "joe@gmail.com",
+    "dob": "03\/12\/80",
+    "anniversary": "04\/12\/90"
+  }
+}

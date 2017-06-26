@@ -8,6 +8,7 @@ import AppComponent from './app.component'
 import {MainScreenComponent} from './components/main-screen/main-screen.component'
 import {SidebarComponent} from './components/sidebar/sidebar.component'
 import {SettingsComponent} from './components/settings/settings.component'
+import SettingsService from './components/settings/settings.service'
 
 const app = angular
   .module('app', [ngRoute])
@@ -15,6 +16,7 @@ const app = angular
   .component('mainScreen', MainScreenComponent)
   .component('sidebar', SidebarComponent)
   .component('settings', SettingsComponent)
+  .service('SettingsService', SettingsService)
   .config(($routeProvider)=> {
     "ngInject";
     $routeProvider
@@ -27,7 +29,12 @@ const app = angular
                     </main-screen>`
       })
       .when('/settings',{
-        template: `<settings></settings>`
+        template: `<settings data="$resolve.settings"></settings>`,
+        resolve:{
+          settings: (SettingsService)=>{
+            return SettingsService.getSettings()
+          }
+        }
       })
   })
   .name

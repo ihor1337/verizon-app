@@ -6,6 +6,9 @@ import template from "./settings.html"
 import "./settings.scss"
 
 export const SettingsComponent={
+  bindings:{
+    data: '<'
+  },
   template,
   controller
 }

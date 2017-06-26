@@ -15,10 +15,10 @@
                     </div>
                     <div class="user-name">
                         <div class="input-label-group">
-                            <span>First Name</span><input type="text">
+                            <span>First Name</span><input ng-model="$ctrl.user.fName" type="text">
                         </div>
                         <div class="input-label-group">
-                            <span>First Name</span><input type="text">
+                            <span>Last Name</span><input ng-model="$ctrl.user.lName" type="text">
                         </div>
 
                     </div>
@@ -29,7 +29,7 @@
                     <div class="item-group">
                         <i class="icon email-icon"></i>
                         <span>Email</span>
-                        <input type="text"></div>
+                        <input ng-model="$ctrl.user.email" type="text"></div>
                 </div>
             </li>
             <li>
@@ -37,7 +37,7 @@
                     <div class="item-group">
                         <i class="icon calendar-icon"></i>
                         <span>birthday</span>
-                        <input type="text"></div>
+                        <input ng-model="$ctrl.user.dob" type="text"></div>
                 </div>
             </li>
             <li>
@@ -45,7 +45,7 @@
                     <div class="item-group">
                         <i class="icon anniversary-icon"></i>
                         <span>anniversary</span>
-                        <input type="text"></div>
+                        <input ng-model="$ctrl.user.anniversary" type="text"></div>
                 </div>
             </li>
             <li>
