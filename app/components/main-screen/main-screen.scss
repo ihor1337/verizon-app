@@ -22,28 +22,6 @@
   text-transform: none;
   padding: 5px 5px;
   outline: none;
-
-  &:hover{
-    .hamburger-inner{
-      &:before{
-        transform:  translate(10px, 2px) rotate(45deg) scale(0.55, 1);
-      }
-      &:after{
-        transform: translate(10px, -2px) rotate(-45deg) scale(0.55, 1);
-      }
-    }
-  }
-
-  &.opened:hover{
-    .hamburger-inner{
-      &:before{
-        transform: translate(-10px, 2px) rotate(-45deg) scale(0.55,1)
-      }
-      &:after{
-        transform: translate(-10px, -2px) rotate(45deg) scale(0.55,1)
-      }
-    }
-  }
 }
 
 .hamburger-outer{
@@ -105,5 +83,33 @@ ng-view,
   &.opened{
     transform: translateX(300px);
     box-shadow: -9px 0 6px -4px rgba(0,0,0,0.3);
+  }
+}
+
+//fix for 'sticky' hover issue on mobile devices.
+//this media will work only on devices that support hover state (have a pointing device)
+@media (hover:hover) {
+  .hamburger{
+    &:hover{
+      .hamburger-inner{
+        &:before{
+          transform:  translate(10px, 2px) rotate(45deg) scale(0.55, 1);
+        }
+        &:after{
+          transform: translate(10px, -2px) rotate(-45deg) scale(0.55, 1);
+        }
+      }
+    }
+
+    &.opened:hover{
+      .hamburger-inner{
+        &:before{
+          transform: translate(-10px, 2px) rotate(-45deg) scale(0.55,1)
+        }
+        &:after{
+          transform: translate(-10px, -2px) rotate(45deg) scale(0.55,1)
+        }
+      }
+    }
   }
 }

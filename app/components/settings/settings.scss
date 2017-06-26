@@ -26,11 +26,6 @@ section#settings{
       margin-top: 10px;
       width: 45px;
       height: 40px;
-      &:hover{
-        i.close-icon{
-          transform: rotate(180deg);
-        }
-      }
 
       i.close-icon{
         background: url('../../../img/close-icon.png');
@@ -261,4 +256,16 @@ main{
 .fb-icon{
   background: url('../../../img/Facebook@2x.png');
   background-size: cover;
+}
+
+//fix for 'sticky' hover issue on mobile devices.
+//this media will work only on devices that support hover state (have a pointing device)
+@media (hover: hover) {
+  button.close-btn{
+    &:hover{
+      i.close-icon{
+        transform: rotate(180deg);
+      }
+    }
+  }
 }
